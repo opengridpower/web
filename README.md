@@ -1,2 +1,2 @@
 # web
-web page.
+web page files.
