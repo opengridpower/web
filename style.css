@@ -365,25 +365,33 @@ nav ul li.logo a:hover {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-  color: white;
+  background: url('earth night light.jpg') center/cover no-repeat;
   overflow: hidden;
 }
 
 .welcome-text {
   text-align: center;
   z-index: 2;
+  background: transparent;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 5%;
+  transform: translateY(-50%);
 }
 
 .animated-text {
   font-size: 4rem;
   animation: fadeIn 2s ease-in-out;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .animated-subtext {
   font-size: 1.5rem;
   margin-top: 1rem;
   animation: slideUp 1.5s ease-in-out;
+  color: #e0e0e0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .animated-image {
