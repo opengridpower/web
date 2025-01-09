@@ -304,9 +304,45 @@ button[type="submit"]:hover {
 
 /* 响应式设计 */
 @media (max-width: 768px) {
+  nav ul {
+    flex-wrap: wrap;
+    padding: 0.5rem;
+  }
+  
   nav ul li {
     display: block;
     margin: 0.5rem 0;
+    width: 100%;
+    text-align: center;
+  }
+  
+  nav ul li.logo {
+    order: -1;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  nav ul li.logo img {
+    width: 60px;
+    margin-right: 12px;
+  }
+  
+  .welcome-container {
+    height: auto;
+    padding: 2rem 1rem;
+  }
+  
+  .welcome-text {
+    margin-top: 2rem;
+    transform: none;
+  }
+  
+  .animated-text {
+    font-size: 2.5rem;
+  }
+  
+  .animated-subtext {
+    font-size: 1.2rem;
   }
   
   main {
@@ -319,6 +355,39 @@ button[type="submit"]:hover {
   
   .features {
     grid-template-columns: 1fr;
+  }
+  
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    font-size: 16px; /* 防止移动端自动缩放 */
+  }
+}
+
+@media (max-width: 480px) {
+  .animated-text {
+    font-size: 2rem;
+  }
+  
+  .animated-subtext {
+    font-size: 1rem;
+  }
+  
+  .welcome-text {
+    padding: 1rem;
+  }
+  
+  nav ul li.logo a {
+    font-size: 1.2rem;
+  }
+  
+  .contact-form,
+  .contact-info {
+    padding: 1rem;
   }
 }
 
