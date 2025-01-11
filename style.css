@@ -302,36 +302,57 @@ button[type="submit"]:hover {
   margin: 0 0 0.5rem 0;
 }
 
+/* 移动端导航菜单 */
+.mobile-nav-toggle {
+  display: none;
+  cursor: pointer;
+  padding: 1rem;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  z-index: 1000;
+}
+
+.mobile-nav-toggle span {
+  display: block;
+  width: 2rem;
+  height: 2px;
+  background: #fff;
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
 /* 响应式设计 */
 @media (max-width: 768px) {
   header {
     padding: 0.5rem;
+    position: relative;
   }
   
   nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #333;
+    padding: 1rem 0;
+    z-index: 999;
+  }
+  
+  nav ul.active {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
   }
   
   nav ul li {
-    display: inline-block;
-    margin: 0.25rem;
-    width: auto;
-  }
-  
-  nav ul li.logo {
-    order: -1;
-    width: 100%;
+    display: block;
     margin: 0.5rem 0;
     text-align: center;
   }
   
-  nav ul li.logo img {
-    width: 60px;
-    margin: 0 auto;
+  .mobile-nav-toggle {
+    display: block;
   }
   
   .welcome-container {
@@ -342,14 +363,22 @@ button[type="submit"]:hover {
   .welcome-text {
     margin-top: 2rem;
     transform: none;
+    padding: 1rem;
   }
   
   .animated-text {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    line-height: 1.2;
   }
   
   .animated-subtext {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+  
+  .welcome-bg {
+    height: 100%;
+    object-position: center;
   }
   
   main {
@@ -362,16 +391,35 @@ button[type="submit"]:hover {
   
   .features {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
   
   .contact-content {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1rem;
   }
   
   .form-group input,
   .form-group textarea {
-    font-size: 16px; /* 防止移动端自动缩放 */
+    font-size: 16px;
+    padding: 0.8rem;
+  }
+  
+  /* 触摸优化 */
+  a, button {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  
+  /* 图片优化 */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* 防止双击缩放 */
+  * {
+    touch-action: manipulation;
   }
 }
 
