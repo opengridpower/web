@@ -455,8 +455,20 @@ nav ul li.logo a:hover {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: url('https://raw.githubusercontent.com/opengridpower/web/main/earth%20night%20light.jpg') center/cover no-repeat;
   overflow: hidden;
+  position: relative;
+}
+
+.welcome-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  pointer-events: none; /* 使图片不可点击 */
+  user-select: none; /* 防止图片被选中 */
 }
 
 .welcome-text {
