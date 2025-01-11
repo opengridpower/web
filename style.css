@@ -455,7 +455,7 @@ nav ul li.logo a:hover {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: url('https://github.com/opengridpower/web/blob/main/earth%20night%20light.jpg') center/cover no-repeat;
+  background: url('https://raw.githubusercontent.com/opengridpower/web/main/earth%20night%20light.jpg') center/cover no-repeat;
   overflow: hidden;
 }
 
