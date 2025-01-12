@@ -318,7 +318,7 @@ button[type="submit"]:hover {
   }
 
   header {
-    padding: 0.5rem;
+    padding: 0;
     position: fixed;
     top: 0;
     left: 0;
@@ -326,23 +326,25 @@ button[type="submit"]:hover {
     z-index: 1000;
     height: var(--header-height);
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   main {
-    padding-top: calc(var(--header-height) + 40px);
+    padding-top: var(--header-height);
     padding-bottom: 20px;
   }
   
   nav ul {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: #333;
-    padding: 1rem 0;
-    z-index: 999;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: var(--header-height);
+    margin: 0;
+    padding: 0 1rem;
   }
   
   nav ul.active {
