@@ -304,6 +304,10 @@ button[type="submit"]:hover {
 
 /* 响应式设计 */
 @media (max-width: 768px) {
+  :root {
+    --header-height: 80px;
+  }
+
   header {
     padding: 0.5rem;
     position: fixed;
@@ -311,12 +315,12 @@ button[type="submit"]:hover {
     left: 0;
     right: 0;
     z-index: 1000;
-    height: 70px;
+    height: var(--header-height);
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   }
   
   main {
-    padding-top: 90px; /* header高度 + 额外间距 */
+    padding-top: calc(var(--header-height) + 20px); /* header高度 + 额外间距 */
   }
   
   nav ul {
