@@ -12,6 +12,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 /* 头部样式 */
@@ -59,6 +60,7 @@ main {
   padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  flex: 1;
 }
 
 section {
@@ -305,7 +307,7 @@ button[type="submit"]:hover {
 /* 响应式设计 */
 @media (max-width: 768px) {
   :root {
-    --header-height: 80px;
+    --header-height: 60px;
   }
 
   header {
@@ -320,7 +322,8 @@ button[type="submit"]:hover {
   }
   
   main {
-    padding-top: calc(var(--header-height) + 20px); /* header高度 + 额外间距 */
+    padding-top: calc(var(--header-height) + 40px);
+    padding-bottom: 20px;
   }
   
   nav ul {
@@ -351,7 +354,7 @@ button[type="submit"]:hover {
   
   .welcome-container {
     height: auto;
-    padding: 2rem 1rem;
+    padding: calc(var(--header-height) + 20px) 1rem 2rem 1rem;
   }
   
   .welcome-text {
@@ -509,8 +512,8 @@ nav ul li.logo a:hover {
   height: 100%;
   object-fit: cover;
   z-index: 1;
-  pointer-events: none; /* 使图片不可点击 */
-  user-select: none; /* 防止图片被选中 */
+  pointer-events: none;
+  user-select: none;
 }
 
 .welcome-text {
