@@ -485,6 +485,12 @@ nav ul li.logo a {
   color: #007bff;
 }
 
+nav ul li.logo img {
+  width: 72px;
+  margin-right: 24px;
+  vertical-align: middle;
+}
+
 nav ul li.logo a:hover {
   background: none;
   color: #0056b3;
@@ -499,6 +505,11 @@ nav ul li.logo a:hover {
   
   nav ul li.logo {
     margin: 0.5rem 0;
+  }
+
+  nav ul li.logo img {
+    width: 36px;
+    margin-right: 12px;
   }
 }
 
