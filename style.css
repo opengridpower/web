@@ -62,6 +62,7 @@ main {
   margin: 0 auto;
   flex: 1;
   min-height: calc(100vh - 200px);
+  padding-top: calc(var(--header-height) + 20px);
 }
 
 section {
