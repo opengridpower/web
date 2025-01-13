@@ -486,9 +486,13 @@ nav ul li.logo a {
 }
 
 nav ul li.logo img {
-  width: 72px;
+  width: auto;
+  height: 72px;
+  max-width: 120px;
+  min-width: 48px;
   margin-right: 24px;
   vertical-align: middle;
+  object-fit: contain;
 }
 
 nav ul li.logo a:hover {
@@ -508,7 +512,8 @@ nav ul li.logo a:hover {
   }
 
   nav ul li.logo img {
-    width: 36px;
+    width: 10vw;
+    height: auto;
     margin-right: 12px;
   }
 }
