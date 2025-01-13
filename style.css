@@ -319,7 +319,7 @@ button[type="submit"]:hover {
   }
 
   header {
-    padding: 0;
+    padding: 0 0 0 1rem;
     position: fixed;
     top: 0;
     left: 0;
@@ -329,7 +329,7 @@ button[type="submit"]:hover {
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
   }
   
   main {
@@ -341,11 +341,11 @@ button[type="submit"]:hover {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     width: 100%;
     height: var(--header-height);
     margin: 0;
-    padding: 0 1rem;
+    padding: 0;
   }
   
   nav ul.active {
