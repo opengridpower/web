@@ -456,6 +456,11 @@ main {
     font-size: 1.2rem;
   }
   
+  /* 社交按钮样式 */
+  nav ul li:nth-last-child(-n+3) a {
+    color: #007bff;
+  }
+  
   /* 社交按钮间距优化 */
   nav ul li:nth-last-child(-n+3) {
     margin: 0 0.15rem;
