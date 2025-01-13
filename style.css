@@ -524,6 +524,14 @@ nav ul li.logo a:hover {
   }
 }
 
+/* 日期样式 */
+.date {
+  font-size: 0.8em;
+  font-weight: normal;
+  margin-left: 0.5em;
+  color: #666;
+}
+
 /* 欢迎页面样式 */
 .welcome-container {
   display: flex;
