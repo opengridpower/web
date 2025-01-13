@@ -62,7 +62,7 @@ main {
   margin: 0 auto;
   flex: 1;
   min-height: calc(100vh - 200px);
-  padding-top: calc(var(--header-height) + 20px);
+  padding-top: calc(var(--header-height) + 20px + 3rem);
 }
 
 section {
@@ -186,6 +186,7 @@ footer {
 .tech-intro {
   color: #666;
   font-size: 1.2rem;
+  margin-top: 3rem;
   margin-bottom: 2rem;
 }
 
