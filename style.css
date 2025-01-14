@@ -516,6 +516,7 @@ nav ul li.logo a {
   font-weight: bold;
   padding: 0.5rem 1rem;
   color: #007bff;
+  text-decoration: underline;
 }
 
 nav ul li.logo img {
@@ -529,9 +530,10 @@ nav ul li.logo img {
 }
 
 nav ul li.logo a:hover {
-  background: none;
+  background: rgba(0,0,0,0.1);
   color: #0056b3;
   text-decoration: underline;
+  border-radius: 4px;
 }
 
 @media (max-width: 768px) {
