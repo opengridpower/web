@@ -1,6 +1,31 @@
 document.addEventListener('DOMContentLoaded', function() {
-  const nav = document.querySelector('nav ul');
+  const nav = document.querySelector('nav');
   const body = document.body;
+  const mobileToggle = document.querySelector('.mobile-nav-toggle');
+
+  // Mobile menu toggle
+  if (mobileToggle) {
+    mobileToggle.addEventListener('click', function() {
+      nav.classList.toggle('active');
+      this.classList.toggle('active');
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!nav.contains(e.target) && !mobileToggle.contains(e.target)) {
+        nav.classList.remove('active');
+        mobileToggle.classList.remove('active');
+      }
+    });
+
+    // Close menu on window resize
+    window.addEventListener('resize', function() {
+      if (window.innerWidth > 768) {
+        nav.classList.remove('active');
+        mobileToggle.classList.remove('active');
+      }
+    });
+  }
 
   // 表单提交处理
   const form = document.querySelector('.contact-form form');

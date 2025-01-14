@@ -315,11 +315,11 @@ button[type="submit"]:hover {
 /* 响应式设计 */
 @media (max-width: 768px) {
   :root {
-    --header-height: 80px;
+    --header-height: 60px;
   }
 
   header {
-    padding: 0.5rem 1rem;
+    padding: 0 1rem;
     position: fixed;
     top: 0;
     left: 0;
@@ -328,57 +328,66 @@ button[type="submit"]:hover {
     height: var(--header-height);
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    background: rgba(0, 0, 0, 0.9);
   }
-  
+
+  .mobile-nav-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+
+  nav {
+    position: fixed;
+    top: var(--header-height);
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: calc(100vh - var(--header-height));
+    background: rgba(0, 0, 0, 0.95);
+    transition: right 0.3s ease;
+    overflow-y: auto;
+  }
+
+  nav.active {
+    right: 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    padding: 1rem 0;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  nav ul li.logo {
+    display: none;
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 1rem;
+    color: white;
+    text-decoration: none;
+  }
+
+  nav ul li a:hover {
+    background: rgba(255,255,255,0.1);
+  }
+
   main {
     padding-top: var(--header-height);
     padding-bottom: 20px;
-  }
-  
-  nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav ul li.logo {
-    display: flex;
-    align-items: center;
-    margin-right: auto;
-    width: 100%;
-    padding: 0.5rem 0;
-  }
-  
-  nav ul li:not(.logo) {
-    display: none;
-  }
-  
-  nav ul li.logo ~ li {
-    display: inline-block;
-    flex: none;
-    text-align: center;
-    padding: 0.5rem;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    white-space: nowrap;
-  }
-  
-  nav ul {
-    flex-wrap: nowrap;
-  }
-  
-  nav ul li.logo img {
-    width: 60px;
-    height: auto;
-    margin-right: 16px;
-  }
-  
-  .mobile-nav-toggle {
-    display: block;
   }
   
   .welcome-container {
@@ -450,49 +459,38 @@ main {
 }
 
 @media (max-width: 480px) {
+  :root {
+    --header-height: 50px;
+  }
+
   header {
+    padding: 0 0.5rem;
+  }
+
+  .mobile-nav-toggle {
+    font-size: 1.2rem;
     padding: 0.25rem;
   }
-  
+
+  nav {
+    width: 100%;
+    max-width: none;
+  }
+
+  nav ul li a {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+
   .animated-text {
     font-size: 2rem;
   }
-  
+
   .animated-subtext {
     font-size: 1rem;
   }
-  
+
   .welcome-text {
-    padding: 1rem;
-  }
-  
-  nav ul li {
-    margin: 0.15rem;
-    font-size: 0.9rem;
-  }
-  
-  nav ul li.logo a {
-    font-size: 1.2rem;
-  }
-  
-  /* 按钮样式 */
-  nav ul li a {
-    color: #007bff;
-  }
-  
-  /* 确保News和Donate按钮样式 */
-  nav ul li a[href*="News"],
-  nav ul li a[href*="Donate"] {
-    color: #007bff;
-  }
-  
-  /* 社交按钮间距优化 */
-  nav ul li:nth-last-child(-n+3) {
-    margin: 0 0.15rem;
-  }
-  
-  .contact-form,
-  .contact-info {
     padding: 1rem;
   }
 }
