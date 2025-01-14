@@ -315,11 +315,11 @@ button[type="submit"]:hover {
 /* 响应式设计 */
 @media (max-width: 768px) {
   :root {
-    --header-height: 60px;
+    --header-height: 100px;
   }
 
   header {
-    padding: 0 0 0 1rem;
+    padding: 0 1rem;
     position: fixed;
     top: 0;
     left: 0;
@@ -328,8 +328,8 @@ button[type="submit"]:hover {
     height: var(--header-height);
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    flex-direction: column;
+    justify-content: center;
   }
   
   main {
@@ -339,23 +339,36 @@ button[type="submit"]:hover {
   
   nav ul {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
+    flex-wrap: wrap;
     width: 100%;
-    height: var(--header-height);
     margin: 0;
     padding: 0;
   }
   
-  nav ul.active {
+  nav ul li.logo {
     display: flex;
+    align-items: center;
+    margin-right: auto;
+    width: 100%;
+    padding: 0.5rem 0;
   }
   
-  nav ul li {
+  nav ul li:not(.logo) {
+    display: none;
+  }
+  
+  nav ul li.logo ~ li {
     display: block;
-    margin: 0.5rem 0;
+    flex: 1;
     text-align: center;
+    padding: 0.5rem 0;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  
+  nav ul li.logo img {
+    width: 40px;
+    height: auto;
+    margin-right: 12px;
   }
   
   .mobile-nav-toggle {
@@ -458,6 +471,12 @@ main {
   
   /* 按钮样式 */
   nav ul li a {
+    color: #007bff;
+  }
+  
+  /* 确保News和Donate按钮样式 */
+  nav ul li a[href*="News"],
+  nav ul li a[href*="Donate"] {
     color: #007bff;
   }
   
