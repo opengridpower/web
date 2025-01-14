@@ -371,7 +371,29 @@ button[type="submit"]:hover {
   }
 
   nav ul li.logo {
-    display: none;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+  }
+
+  .header-logo {
+    display: flex;
+    align-items: center;
+    height: var(--header-height);
+  }
+
+  .header-logo img {
+    height: 40px;
+    width: auto;
+    margin-right: 0.5rem;
   }
 
   nav ul li a {
