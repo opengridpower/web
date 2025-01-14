@@ -358,11 +358,16 @@ button[type="submit"]:hover {
   }
   
   nav ul li.logo ~ li {
-    display: block;
-    flex: 1;
+    display: inline-block;
+    flex: none;
     text-align: center;
-    padding: 0.5rem 0;
+    padding: 0.5rem;
     border-top: 1px solid rgba(255,255,255,0.1);
+    white-space: nowrap;
+  }
+  
+  nav ul {
+    flex-wrap: nowrap;
   }
   
   nav ul li.logo img {
