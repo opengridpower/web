@@ -315,11 +315,11 @@ button[type="submit"]:hover {
 /* 响应式设计 */
 @media (max-width: 768px) {
   :root {
-    --header-height: 100px;
+    --header-height: 80px;
   }
 
   header {
-    padding: 0 1rem;
+    padding: 0.5rem 1rem;
     position: fixed;
     top: 0;
     left: 0;
@@ -328,8 +328,9 @@ button[type="submit"]:hover {
     height: var(--header-height);
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
   
   main {
@@ -371,9 +372,9 @@ button[type="submit"]:hover {
   }
   
   nav ul li.logo img {
-    width: 40px;
+    width: 60px;
     height: auto;
-    margin-right: 12px;
+    margin-right: 16px;
   }
   
   .mobile-nav-toggle {
