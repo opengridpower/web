@@ -419,14 +419,15 @@ button[type="submit"]:hover {
   }
 
   main {
-    padding-top: var(--header-height);
+    padding-top: calc(var(--header-height) + 20px);
     padding-bottom: 20px;
+    margin-top: var(--header-height);
   }
   
   .welcome-container {
     height: auto;
-    padding: calc(var(--header-height) + 20px) 1rem 2rem 1rem;
-    min-height: 100vh;
+    padding: calc(var(--header-height) + 40px) 1rem 2rem 1rem;
+    min-height: calc(100vh - var(--header-height));
   }
   
   .welcome-text {
