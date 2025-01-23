@@ -654,6 +654,7 @@ nav ul li.logo a:hover {
   height: 100vh;
   overflow: hidden;
   position: relative;
+  padding-top: calc(var(--header-height) + 20px);
 }
 
 .welcome-bg {
@@ -670,12 +671,13 @@ nav ul li.logo a:hover {
 
 .welcome-text {
   text-align: center;
-  z-index: 2;
+  z-index: 1001;
   background: transparent;
   padding: 1.5rem;
   border-radius: 8px;
   margin-top: 5%;
   transform: translateY(-50%);
+  position: relative;
 }
 
 .animated-text {
