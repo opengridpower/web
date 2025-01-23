@@ -397,14 +397,24 @@ button[type="submit"]:hover {
   }
 
   nav ul li a {
-    display: block;
-    padding: 1rem;
+    display: flex;
+    align-items: center;
+    padding: 1.2rem 1.5rem;
     color: white;
     text-decoration: none;
+    font-size: 1.1rem;
+    min-height: 48px;
+    margin-left: -0.5rem;
   }
 
   nav ul li a:hover {
     background: rgba(255,255,255,0.1);
+  }
+
+  /* Add touch feedback */
+  nav ul li a:active {
+    background: rgba(255,255,255,0.2);
+    transform: scale(0.98);
   }
 
   main {
@@ -415,22 +425,38 @@ button[type="submit"]:hover {
   .welcome-container {
     height: auto;
     padding: calc(var(--header-height) + 20px) 1rem 2rem 1rem;
+    min-height: 100vh;
   }
   
   .welcome-text {
     margin-top: 2rem;
     transform: none;
-    padding: 1rem;
+    padding: 1.5rem;
+    width: 90%;
+    max-width: 400px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 12px;
   }
   
   .animated-text {
-    font-size: 2rem;
-    line-height: 1.2;
+    font-size: 2.2rem;
+    line-height: 1.3;
+    margin-bottom: 1rem;
   }
   
   .animated-subtext {
-    font-size: 1rem;
-    margin-top: 0.5rem;
+    font-size: 1.1rem;
+    margin-top: 0.8rem;
+    line-height: 1.4;
+  }
+
+  /* Performance optimization */
+  @media (prefers-reduced-motion: reduce) {
+    .animated-text,
+    .animated-subtext,
+    .animated-image img {
+      animation: none !important;
+    }
   }
   
   .welcome-bg {
@@ -459,7 +485,23 @@ main {
   .form-group input,
   .form-group textarea {
     font-size: 16px;
-    padding: 0.8rem;
+    padding: 1rem;
+    border-radius: 8px;
+    -webkit-appearance: none;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0,123,255,0.1);
+  }
+
+  button[type="submit"] {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    margin-top: 1rem;
   }
   
   /* 触摸优化 */
@@ -474,9 +516,29 @@ main {
     height: auto;
   }
   
-  /* 防止双击缩放 */
+  /* Prevent double tap zoom */
   * {
     touch-action: manipulation;
+  }
+
+  /* Improve mobile scrolling */
+  html {
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    overscroll-behavior-y: contain;
+  }
+
+  /* Better mobile viewport handling */
+  @viewport {
+    width: device-width;
+    zoom: 1.0;
+  }
+
+  @-ms-viewport {
+    width: device-width;
   }
 }
 
